@@ -1,8 +1,6 @@
 package domain;
 
-import java.io.Serializable;
-
-public class Girokonto extends Konto implements Serializable {
+public class Girokonto extends Konto{
 			private long dispo = 100000;
 
 			public Girokonto(String inhaber, int kontozähler) {
