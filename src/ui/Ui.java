@@ -1,8 +1,8 @@
 package ui;
 
-import java.util.Scanner;
-
 import facade.Banksystem;
+
+import java.util.Scanner;
 
 public class Ui
 {
@@ -16,33 +16,20 @@ public class Ui
 
 			private void hauptmenü() {
 						System.out.println("Willkommen bei der " + bs.getBankname() + "!");
-
+						String[] options = {"--------", "Hauptmenü", "1 -> Konten anzeigen", "2 -> Konto anlegen" , "3 -> Geld einzahlen",
+														"4 -> Geld auszahlen", "5 -> Kontoauszug drucken", "6 -> Überweisung beauftragen", "7 -> Saldo abfragen", "9 -> Beenden", "", "> "};
 						mainloop:
 						while (true) {
-									System.out.println();
-									System.out.println("--------");
-									System.out.println("Hauptmenü");
-									System.out.println("1 -> Konten anzeigen");
-									System.out.println("2 -> Konto anlegen");
-									System.out.println("3 -> Geld einzahlen");
-									System.out.println("4 -> Geld auszahlen");
-									System.out.println("5 -> Kontoauszug drucken");
-									System.out.println("6 -> Überweisung beauftragen");
-									System.out.println("7 -> Saldo abfragen");
-
-									System.out.println("9 -> Beenden");
-									System.out.println();
-
-									System.out.print("> ");
+									for(String s: options){
+												System.out.println(s);
+									}
 									int input = Integer.parseInt(sc.nextLine());
 									System.out.println();
 
 									try {
 												switch(input) {
 															case 1: kontenAnzeigen(); break;
-															case 2:
-																		kontoAnlegen();
-																		break;
+															case 2: kontoAnlegen(); break;
 															case 3: geldEinzahlen(); break;
 															case 4: geldAuszahlen(); break;
 															case 5: kontoauszugDrucken(); break;
