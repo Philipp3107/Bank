@@ -33,7 +33,6 @@ public class Banksystem {
 						for (Konto k : konten) {
 									liste[i++] = k.toString();
 						}
-
 						return liste;
 			}
 

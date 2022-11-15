@@ -47,6 +47,12 @@ public class Kunde {
 			public int get_age(){
 						return age;
 			}
+			public int add_to_accounts(Konto konto){
+						account.put(konto.getKontonummer(), konto);
+						return konto.getKontonummer();
+			}
+
+
 
 
 
