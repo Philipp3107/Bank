@@ -1,5 +1,7 @@
 package domain;
 
+import java.util.HashMap;
+
 public class Kunde {
 			private String first_name;
 			private String last_name;
@@ -8,6 +10,8 @@ public class Kunde {
 			private int age;
 			private int client_number;
 
+			protected HashMap<Integer, Konto> account;
+
 			public Kunde(String first_name, String last_name, String addres, String password, int age, int client_number){
 					this.first_name = first_name;
 					this.last_name = last_name;
@@ -15,12 +19,13 @@ public class Kunde {
 					this.password = password;
 					this.age = age;
 					this.client_number = 1000 + client_number;
+					this.account = new HashMap<>();
 			}
 
 			public String get_name(){
 						return first_name + " " + last_name;
 			}
-			public String get__name(String part){
+			public String get_name(String part){
 								switch (part){
 											case "first":
 														return first_name;

@@ -11,10 +11,10 @@ public class Ui
 
 			public Ui(Banksystem bs) {
 						this.bs = bs;
-						hauptmenü();
+						hauptmenue();
 			}
 
-			private void hauptmenü() {
+			private void hauptmenue() {
 						System.out.println("Willkommen bei der " + bs.getBankname() + "!");
 						String[] options = {"--------", "Hauptmenü", "1 -> Konten anzeigen", "2 -> Konto anlegen" , "3 -> Geld einzahlen",
 														"4 -> Geld auszahlen", "5 -> Kontoauszug drucken", "6 -> Überweisung beauftragen", "7 -> Saldo abfragen", "9 -> Beenden", "", "> "};
@@ -50,6 +50,7 @@ public class Ui
 
 			private void kontenAnzeigen() {
 						String[] konten = bs.getKontenliste();
+
 						if (konten.length > 0) {
 									System.out.println("Folgende Konten sind aktuell verfügbar:");
 									for (String s : konten) {
@@ -118,15 +119,19 @@ public class Ui
 
 			private void überweisungBeauftragen() throws Exception {
 						System.out.print("Bitte die Kontonummer des Ausgangskontos der Überweisung eingeben: ");
+						System.out.println("Ausgangskonto> ");
 						int startkonto = Integer.parseInt(sc.nextLine());
 
 						System.out.print("Bitte die Kontonummmer für das Zielkonto der Überweisung eingeben: ");
+						System.out.println("Zielkonto> ");
 						int zielkonto = Integer.parseInt(sc.nextLine());
 
 						System.out.print("Bitte den gewünschten Überweisungsbetrag eingeben: ");
+						System.out.println("Bertag> ");
 						double betrag = Double.parseDouble(sc.nextLine());
 
 						System.out.print("Bitte den Verwendungszweck eingeben: ");
+						System.out.println("Verwendungszweck> ");
 						String verwendungszweck = sc.nextLine();
 
 						boolean erfolgreich = bs.überweisungBeauftragen(startkonto, zielkonto, (long)(betrag * 100), verwendungszweck);
