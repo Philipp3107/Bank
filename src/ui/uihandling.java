@@ -20,6 +20,7 @@ public class uihandling {
             System.out.println(" > ");
             int input = Integer.parseInt(sc.nextLine());
             System.out.println("try again");
+            System.out.println("try again");
 
             switch(input){
                 case 1: anmelden(sc); break;
