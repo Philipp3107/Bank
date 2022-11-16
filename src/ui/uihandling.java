@@ -15,6 +15,7 @@ public class uihandling {
             String[] options = {"Anmelden", "Registrieren", "beenden"};
             for(String s: options){
                 System.out.println(s);
+                System.out.println("lets make some changes");
             }
             System.out.println(" > ");
             int input = Integer.parseInt(sc.nextLine());
