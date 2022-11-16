@@ -51,6 +51,11 @@ public class Kunde {
 						account.put(konto.getKontonummer(), konto);
 						return konto.getKontonummer();
 			}
+			//neue toString() methode um Kunden als Text ausgeben zu können
+			@Override
+			public String toString(){
+				return first_name + " " + last_name + "[ Adresse: " + addres + ", Age " + age + ", Clientnumber" + client_number + " ]";
+			}
 
 
 
