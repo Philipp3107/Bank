@@ -35,9 +35,17 @@ public class Banksystem {
 						}
 						return liste;
 			}
+			//Kunde anlegen über das Banksystem
+			public int add_kunde(String first_name, String last_name, String adress, String password, int age){
+				return bank.adde_kunden(first_name, last_name, adress, password, age);
+			}
+			//Kunden einloggen über das Banksystem
+			public String login_kunde(int kn){
+				return bank.get_Password(kn);			
+			}
 
 			public String getBankname() {
-						return bank.getName();
+					return bank.getName();
 			}
 
 			public long geldEinzahlen(int kontonummer, long betrag) throws Exception {
